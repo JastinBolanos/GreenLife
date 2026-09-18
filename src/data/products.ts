@@ -1,7 +1,15 @@
 import { Product } from '../types';
+import heroTreeImage from '../assets/images/hero_tree_perfect_1789756581956.jpg';
+import heroTreePortrait from '../assets/images/hero_tree_1789754667725.jpg';
+import japaneseMapleImage from '../assets/images/japanese_maple_1789754681120.jpg';
+import cherryBlossomImage from '../assets/images/cherry_blossom_1789754691938.jpg';
+import lemonTreeImage from '../assets/images/lemon_tree_1789754712919.jpg';
+import magnoliaTreeImage from '../assets/images/magnolia_tree_1789754723021.jpg';
+import blueSpruceImage from '../assets/images/blue_spruce_1789754750338.jpg';
+import hydrangeaBushImage from '../assets/images/hydrangea_bush_1789754759096.jpg';
 
-export const HERO_TREE_IMAGE = '/src/assets/images/hero_tree_perfect_1789756581956.jpg';
-export const HERO_TREE_PORTRAIT = '/src/assets/images/hero_tree_1789754667725.jpg';
+export const HERO_TREE_IMAGE = heroTreeImage;
+export const HERO_TREE_PORTRAIT = heroTreePortrait;
 
 export const PRODUCTS: Product[] = [
   {
@@ -16,7 +24,7 @@ export const PRODUCTS: Product[] = [
       text: 'HERITAGE ARBOR',
       color: 'emerald',
     },
-    image: '/src/assets/images/japanese_maple_1789754681120.jpg',
+    image: japaneseMapleImage,
     description: 'Cultivated for its layered architectural horizontal branches and deeply lobed vermilion foliage. Acclimated to develop strong structural heartwood and a tranquil, contemplative canopy presence.',
     botanicalSpecs: {
       scientificName: 'Acer palmatum "Bloodgood"',
@@ -51,7 +59,7 @@ export const PRODUCTS: Product[] = [
       text: 'FLORAL CANOPY',
       color: 'purple',
     },
-    image: '/src/assets/images/cherry_blossom_1789754691938.jpg',
+    image: cherryBlossomImage,
     description: 'An exalted flowering arbor bearing multi-layered sakura pom-poms in pastel blush. Selected from vigorous cold-hardy rootstock to anchor estate lawns in clouds of springtime splendor.',
     botanicalSpecs: {
       scientificName: 'Prunus serrulata',
@@ -86,7 +94,7 @@ export const PRODUCTS: Product[] = [
       text: 'HARVEST ARBOR',
       color: 'emerald',
     },
-    image: '/src/assets/images/lemon_tree_1789754712919.jpg',
+    image: lemonTreeImage,
     description: 'An aromatic dwarf orchard tree combining mandarin sweetness with lively citrus zest. Yields thin-skinned golden fruits alongside intensely perfumed blossoms in sun-drenched rooms and verandas.',
     botanicalSpecs: {
       scientificName: 'Citrus x meyeri',
@@ -121,7 +129,7 @@ export const PRODUCTS: Product[] = [
       text: 'ROYAL CANOPY',
       color: 'blue',
     },
-    image: '/src/assets/images/magnolia_tree_1789754723021.jpg',
+    image: magnoliaTreeImage,
     description: 'An ancient primeval flowering arbor producing goblet-shaped blossoms in velvet alabaster and wine-purple. Emerges before spring foliage to create a dramatic architectural focal point.',
     botanicalSpecs: {
       scientificName: 'Magnolia x soulangeana',
@@ -156,7 +164,7 @@ export const PRODUCTS: Product[] = [
       text: 'ALPINE SENTINEL',
       color: 'blue',
     },
-    image: '/src/assets/images/blue_spruce_1789754750338.jpg',
+    image: blueSpruceImage,
     description: 'Stately sub-alpine conifer celebrated for its frosty silver-cyan needles and resolute wind resistance. Exudes natural forest phytoncides that refresh surrounding microclimates.',
     botanicalSpecs: {
       scientificName: 'Picea pungens var. glauca',
@@ -192,7 +200,7 @@ export const PRODUCTS: Product[] = [
       text: 'SPECIAL HARVEST',
       color: 'pink',
     },
-    image: '/src/assets/images/hydrangea_bush_1789754759096.jpg',
+    image: hydrangeaBushImage,
     description: 'Generous domes of rich amethyst and magenta florets providing continuous color from solstice to frost. Thick understory foliage responds dynamically to mineral soil balance.',
     botanicalSpecs: {
       scientificName: 'Hydrangea macrophylla',
@@ -227,7 +235,7 @@ export const PRODUCTS: Product[] = [
       text: 'LIVING RELIC',
       color: 'emerald',
     },
-    image: '/src/assets/images/hero_tree_1789754667725.jpg',
+    image: heroTreePortrait,
     description: 'A botanical masterpiece melding centuries-old bonsai root craftsmanship with natural luminescent moss. Radiates a tranquil emerald aura at twilight.',
     botanicalSpecs: {
       scientificName: 'Ficus microcarpa x Pyrocystis',
