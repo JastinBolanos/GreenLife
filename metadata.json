@@ -1,0 +1,6 @@
+{
+  "name": "GreenLife Tree Nursery",
+  "description": "Futuristic luxury botanical sanctuary offering premium specimen trees, bioluminescent flora, and interactive botanical exploration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
