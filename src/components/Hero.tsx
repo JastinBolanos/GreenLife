@@ -168,7 +168,7 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
           </div>
 
-          <div className="lg:col-span-4 xl:col-span-5 2xl:col-span-5 relative flex justify-center lg:justify-end items-center min-h-[160px] sm:min-h-[200px] lg:min-h-[280px]">
+          <div className="lg:col-span-4 xl:col-span-5 2xl:col-span-5 relative flex justify-center lg:justify-end items-center min-h-[180px] sm:min-h-[220px] lg:min-h-[300px]">
             <div 
               onClick={(e) => {
                 e.stopPropagation();
@@ -176,17 +176,82 @@ export const Hero: React.FC<HeroProps> = ({
                 setClickRipple(true);
                 setTimeout(() => setClickRipple(false), 900);
               }}
-              className="relative group/badge cursor-pointer self-center lg:mr-8 xl:mr-16 transition-transform duration-300 hover:scale-108"
+              className="relative group/badge cursor-pointer self-center lg:mr-8 xl:mr-16 transition-transform duration-300 hover:scale-108 select-none"
               title="Touch to stimulate arbor vitality"
             >
-              <div className="w-36 h-36 sm:w-44 sm:h-44 xl:w-52 xl:h-52 rounded-full border-2 border-[#84cc16] bg-[#020b05]/85 backdrop-blur-xl flex flex-col items-center justify-center p-4 text-center shadow-[0_0_50px_rgba(132,204,22,0.4)] group-hover:shadow-[0_0_70px_rgba(132,204,22,0.7)] transition-all">
+              {/* Luminous Pulsing Glow Behind the Ring */}
+              <div 
+                className={`absolute -inset-4 sm:-inset-6 rounded-full bg-gradient-to-tr from-[#22c55e]/40 via-[#84cc16]/50 to-[#4ade80]/40 blur-2xl transition-all duration-500 pointer-events-none ${
+                  clickRipple ? 'opacity-100 scale-125 blur-3xl' : 'opacity-70 group-hover/badge:opacity-95'
+                }`} 
+              />
+
+              {/* Primary Rotating Glowing Green Halo Ring (Spins Clockwise) */}
+              <div 
+                className="absolute -inset-2 sm:-inset-3 pointer-events-none"
+                style={{ animation: 'spin 8s linear infinite' }}
+              >
+                <svg viewBox="0 0 120 120" className="w-full h-full drop-shadow-[0_0_16px_rgba(132,204,22,0.95)]">
+                  <defs>
+                    <linearGradient id="hero-glowing-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#84cc16" />
+                      <stop offset="35%" stopColor="#4ade80" />
+                      <stop offset="70%" stopColor="#22c55e" />
+                      <stop offset="100%" stopColor="#a3e635" />
+                    </linearGradient>
+                  </defs>
+                  {/* Glowing perimeter circular path */}
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="56"
+                    fill="none"
+                    stroke="url(#hero-glowing-ring)"
+                    strokeWidth="2.5"
+                    strokeDasharray="24 10 40 12"
+                    strokeLinecap="round"
+                  />
+                  {/* Glowing Orbiting Celestial Light Nodes */}
+                  <circle cx="60" cy="4" r="3.8" fill="#a3e635" className="filter drop-shadow-[0_0_8px_#84cc16]" />
+                  <circle cx="116" cy="60" r="2.8" fill="#4ade80" className="filter drop-shadow-[0_0_8px_#4ade80]" />
+                  <circle cx="60" cy="116" r="3.8" fill="#a3e635" className="filter drop-shadow-[0_0_8px_#84cc16]" />
+                  <circle cx="4" cy="60" r="2.8" fill="#4ade80" className="filter drop-shadow-[0_0_8px_#4ade80]" />
+                </svg>
+              </div>
+
+              {/* Secondary Counter-Rotating Celestial Energy Ring (Spins Counter-Clockwise) */}
+              <div 
+                className="absolute -inset-1 sm:-inset-1.5 pointer-events-none"
+                style={{ animation: 'spin 14s linear infinite reverse' }}
+              >
+                <svg viewBox="0 0 120 120" className="w-full h-full opacity-80 drop-shadow-[0_0_10px_rgba(74,222,128,0.8)]">
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="57.5"
+                    fill="none"
+                    stroke="#4ade80"
+                    strokeWidth="1.2"
+                    strokeDasharray="6 18"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </div>
+
+              {/* Click Ripple Wave Ring */}
+              {clickRipple && (
+                <div className="absolute -inset-6 rounded-full border-2 border-[#a3e635] animate-ping pointer-events-none opacity-80" />
+              )}
+
+              {/* Central Badge Content with Solid Dark Glass Core */}
+              <div className="relative w-36 h-36 sm:w-44 sm:h-44 xl:w-52 xl:h-52 rounded-full border border-[#84cc16]/50 bg-[#020b05]/90 backdrop-blur-xl flex flex-col items-center justify-center p-4 text-center shadow-[0_0_35px_rgba(132,204,22,0.45)] group-hover/badge:shadow-[0_0_55px_rgba(132,204,22,0.75)] transition-all">
                 <div className="text-[#84cc16] mb-1.5 animate-pulse">
-                  <Sprout className="w-7 h-7 sm:w-9 sm:h-9 xl:w-10 xl:h-10" />
+                  <Sprout className="w-7 h-7 sm:w-9 sm:h-9 xl:w-10 xl:h-10 drop-shadow-[0_0_8px_rgba(132,204,22,0.8)]" />
                 </div>
-                <span className="text-sm sm:text-base xl:text-lg font-black tracking-wider text-white uppercase font-['Syne',sans-serif] leading-tight">
+                <span className="text-sm sm:text-base xl:text-lg font-black tracking-wider text-white uppercase font-['Syne',sans-serif] leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                   LIVING ARBORS
                 </span>
-                <span className="text-[11px] sm:text-xs xl:text-sm font-bold tracking-wider text-[#84cc16] uppercase mt-1">
+                <span className="text-[11px] sm:text-xs xl:text-sm font-bold tracking-wider text-[#84cc16] uppercase mt-1 drop-shadow-[0_0_6px_rgba(132,204,22,0.6)]">
                   ENDURING ROOTS
                 </span>
                 <span className="text-[9px] sm:text-[10px] text-zinc-400 mt-1 uppercase tracking-widest">

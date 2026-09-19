@@ -44,13 +44,37 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
           : 'flex-row items-center gap-3'
       } ${className}`}
     >
-      {/* Serious, Prestigious Botanical Seal (Solid Forest Green #0a2f1d & Solid White #ffffff) */}
+      {/* Serious, Prestigious Botanical Seal (Solid Forest Green #0a2f1d & Solid White #ffffff) with Glowing Rotating Green Halo */}
       <div
         className={`relative ${iconSizeMap[size]} flex-shrink-0 flex items-center justify-center transition-transform duration-200 group-hover:scale-105`}
       >
+        {/* Luminous Green Glow Ambient Backlight */}
+        <div className="absolute -inset-1 rounded-full bg-[#22c55e]/25 blur-sm group-hover:bg-[#22c55e]/45 transition-colors pointer-events-none" />
+
+        {/* Glowing Rotating Green Halo Ring */}
+        <div 
+          className="absolute -inset-1 pointer-events-none"
+          style={{ animation: 'spin 9s linear infinite' }}
+        >
+          <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-[0_0_8px_rgba(34,197,94,0.9)]">
+            <circle
+              cx="50"
+              cy="50"
+              r="49"
+              fill="none"
+              stroke="#22c55e"
+              strokeWidth="2"
+              strokeDasharray="22 10 38 12"
+              strokeLinecap="round"
+            />
+            <circle cx="50" cy="1" r="2.2" fill="#86efac" />
+            <circle cx="50" cy="99" r="2.2" fill="#86efac" />
+          </svg>
+        </div>
+
         <svg
           viewBox="0 0 100 100"
-          className="w-full h-full rounded-full shadow-md"
+          className="w-full h-full rounded-full shadow-md relative z-10"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
