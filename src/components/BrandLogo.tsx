@@ -16,65 +16,41 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 }) => {
   // Dimensions mapping
   const iconSizeMap = {
-    sm: 'w-8 h-8',
-    md: 'w-10 h-10 sm:w-11 sm:h-11',
-    lg: 'w-14 h-14 sm:w-16 sm:h-16',
-    xl: 'w-20 h-20 sm:w-24 sm:h-24',
+    sm: 'w-9 h-9 sm:w-10 sm:h-10',
+    md: 'w-12 h-12 sm:w-14 sm:h-14',
+    lg: 'w-16 h-16 sm:w-20 sm:h-20',
+    xl: 'w-24 h-24 sm:w-28 sm:h-28',
   };
 
   const titleSizeMap = {
-    sm: 'text-base tracking-[0.16em]',
-    md: 'text-lg sm:text-xl md:text-2xl tracking-[0.18em]',
-    lg: 'text-2xl sm:text-3xl tracking-[0.2em]',
-    xl: 'text-3xl sm:text-4xl tracking-[0.22em]',
+    sm: 'text-lg tracking-[0.16em]',
+    md: 'text-xl sm:text-2xl md:text-[26px] tracking-[0.18em]',
+    lg: 'text-2xl sm:text-3xl md:text-4xl tracking-[0.2em]',
+    xl: 'text-4xl sm:text-5xl tracking-[0.22em]',
   };
 
   const subtitleSizeMap = {
-    sm: 'text-[8px] tracking-[0.24em]',
-    md: 'text-[9px] sm:text-[10px] tracking-[0.28em]',
-    lg: 'text-xs tracking-[0.3em]',
-    xl: 'text-sm tracking-[0.34em]',
+    sm: 'text-[9px] tracking-[0.26em]',
+    md: 'text-[10px] sm:text-[11px] md:text-xs tracking-[0.32em]',
+    lg: 'text-xs sm:text-sm tracking-[0.34em]',
+    xl: 'text-sm sm:text-base tracking-[0.36em]',
   };
 
   return (
     <div
       className={`group flex select-none ${
         variant === 'vertical'
-          ? 'flex-col items-center text-center gap-3'
-          : 'flex-row items-center gap-3'
+          ? 'flex-col items-center text-center gap-3.5'
+          : 'flex-row items-center gap-3.5 sm:gap-4'
       } ${className}`}
     >
-      {/* Serious, Prestigious Botanical Seal (Solid Forest Green #0a2f1d & Solid White #ffffff) with Glowing Rotating Green Halo */}
+      {/* Serious, Prestigious Botanical Seal (Solid Forest Green #0a2f1d & Solid White #ffffff) */}
       <div
         className={`relative ${iconSizeMap[size]} flex-shrink-0 flex items-center justify-center transition-transform duration-200 group-hover:scale-105`}
       >
-        {/* Luminous Green Glow Ambient Backlight */}
-        <div className="absolute -inset-1 rounded-full bg-[#22c55e]/25 blur-sm group-hover:bg-[#22c55e]/45 transition-colors pointer-events-none" />
-
-        {/* Glowing Rotating Green Halo Ring */}
-        <div 
-          className="absolute -inset-1 pointer-events-none"
-          style={{ animation: 'spin 9s linear infinite' }}
-        >
-          <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-[0_0_8px_rgba(34,197,94,0.9)]">
-            <circle
-              cx="50"
-              cy="50"
-              r="49"
-              fill="none"
-              stroke="#22c55e"
-              strokeWidth="2"
-              strokeDasharray="22 10 38 12"
-              strokeLinecap="round"
-            />
-            <circle cx="50" cy="1" r="2.2" fill="#86efac" />
-            <circle cx="50" cy="99" r="2.2" fill="#86efac" />
-          </svg>
-        </div>
-
         <svg
           viewBox="0 0 100 100"
-          className="w-full h-full rounded-full shadow-md relative z-10"
+          className="w-full h-full rounded-full shadow-md"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
