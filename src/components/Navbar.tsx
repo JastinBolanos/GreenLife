@@ -12,6 +12,7 @@ import {
   X
 } from 'lucide-react';
 import { sound } from '../utils/audio';
+import { BrandLogo } from './BrandLogo';
 
 interface NavbarProps {
   cartCount: number;
@@ -126,27 +127,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               sound.playChime(520);
               onSelectCategory('ALL');
             }}
-            className="flex items-center gap-3.5 cursor-pointer group select-none flex-shrink-0"
+            className="cursor-pointer group select-none flex-shrink-0"
+            title="GreenLife Living Arboretum"
           >
-            <div className="relative w-11 h-11 rounded-2xl flex items-center justify-center bg-gradient-to-br from-emerald-500/25 to-emerald-950/90 border border-emerald-500/40 shadow-[0_0_22px_rgba(34,197,94,0.4)] group-hover:shadow-[0_0_30px_rgba(74,222,128,0.7)] group-hover:border-[#4ade80] transition-all duration-300">
-              <svg 
-                viewBox="0 0 32 32" 
-                className="w-6 h-6 text-[#22c55e] group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_10px_rgba(34,197,94,0.8)]"
-                fill="currentColor"
-              >
-                <path d="M16 3C11 3 6 8 6 15C6 21 11 26 16 28C16 23 18 19 22 17C26 15 28 10 28 5C23 5 18 8 16 11V3Z" />
-                <path d="M16 11C14 14 11 17 8 18C10 21 13 22 16 23V11Z" opacity="0.6" />
-              </svg>
-            </div>
-
-            <div className="flex flex-col">
-              <span className="text-xl sm:text-2xl font-black tracking-[0.16em] text-white group-hover:text-emerald-200 transition-colors uppercase font-['Syne',sans-serif] leading-tight">
-                GREENLIFE
-              </span>
-              <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.26em] text-emerald-400/90 uppercase font-['Plus_Jakarta_Sans',sans-serif]">
-                LIVING ARBORETUM
-              </span>
-            </div>
+            <BrandLogo size="md" variant="horizontal" showTagline={true} />
           </div>
 
           <nav className="hidden xl:flex items-center space-x-1 lg:space-x-1.5">

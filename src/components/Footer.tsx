@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Sprout, Mail, Check, ShieldCheck, HeartHandshake, Trees, MapPin, Phone } from 'lucide-react';
 import { sound } from '../utils/audio';
+import { BrandLogo } from './BrandLogo';
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -75,18 +76,8 @@ export const Footer: React.FC = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 pb-12 border-b border-emerald-950/60">
           <div className="col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-emerald-500/20 border border-emerald-500/40 text-[#22c55e]">
-                <Sprout className="w-4 h-4" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-black tracking-widest text-white uppercase font-['Syne',sans-serif]">
-                  GREENLIFE
-                </span>
-                <span className="text-[9px] font-bold tracking-[0.25em] text-emerald-400 uppercase -mt-0.5">
-                  LIVING ARBORETUM
-                </span>
-              </div>
+            <div>
+              <BrandLogo size="md" variant="horizontal" showTagline={true} />
             </div>
 
             <p className="text-xs text-zinc-400 max-w-sm leading-relaxed">
