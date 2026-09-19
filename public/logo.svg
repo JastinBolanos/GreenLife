@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Solid Color 1: Deep Botanical Forest Green #0a2f1d -->
+  <circle cx="50" cy="50" r="48" fill="#0a2f1d" />
+
+  <!-- Crisp Precision Perimeter Ring -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#ffffff" stroke-width="2.5" />
+
+  <!-- Solid Color 2: Solid White #ffffff - Stately Heritage Specimen Tree -->
+  <polygon points="50,20 59,32 54.5,32 63,44 58,44 67,58 53,58 53,74 47,74 47,58 33,58 42,44 37,44 45.5,32 41,32" fill="#ffffff" />
+  
+  <!-- Solid Base / Pedestal -->
+  <rect x="36" y="74" width="28" height="4" rx="1.5" fill="#ffffff" />
+</svg>
